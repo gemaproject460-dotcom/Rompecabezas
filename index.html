@@ -77,11 +77,21 @@ body{
 }
 
 .title{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
     font-size:90px;
     color:#003b8e;
     text-shadow:
     5px 5px 0px white,
     8px 8px 15px rgba(0,0,0,0.2);
+}
+
+.mascota-title{
+    width:120px;
+    height:auto;
+    animation:pulse 2s infinite;
 }
 
 .subtitle{
@@ -333,7 +343,8 @@ body{
     src="https://cdn-icons-png.flaticon.com/512/616/616490.png">
 
     <div class="title">
-        MINI HÉROES
+    <img src="mascota.png" alt="Mascota" class="mascota-title">
+    <span>MINI HÉROES</span>
     </div>
 
     <div class="subtitle">
