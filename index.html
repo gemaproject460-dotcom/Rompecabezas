@@ -39,9 +39,11 @@ body{
 
 .icon{
     position:absolute;
-    font-size:40px;
-    animation:float 6s infinite ease-in-out;
-    opacity:0.3;
+    font-size:42px;
+    opacity:0.25;
+    animation:float 6s ease-in-out infinite;
+    color:#ffffff;
+    text-shadow:0 0 10px rgba(0,0,0,.15);
 }
 
 @keyframes float{
@@ -323,14 +325,29 @@ body{
 <!-- ===== DECORACION ===== -->
 
 <div class="decor">
-
-<div class="icon"><i class="fas fa-fire-extinguisher"></i></div>
-<div class="icon"><i class="fas fa-truck-medical"></i></div>
-<div class="icon"><i class="fas fa-shield-halved"></i></div>
-<div class="icon"><i class="fas fa-stethoscope"></i></div>
-<div class="icon"><i class="fas fa-heart"></i></div>
-<div class="icon"><i class="fas fa-fire"></i></div>
-<div class="icon"><i class="fas fa-kit-medical"></i></div>
+<div class="icon" style="top:5%; left:5%;">
+    <i class="fas fa-fire-extinguisher"></i>
+</div>
+<div class="icon" style="top:10%; right:8%;">
+    <i class="fas fa-truck-medical"></i>
+</div>
+<div class="icon" style="top:35%; left:3%;">
+    <i class="fas fa-shield-halved"></i>
+</div>
+<div class="icon" style="top:60%; right:5%;">
+    <i class="fas fa-stethoscope"></i>
+</div>
+<div class="icon" style="top:80%; left:10%;">
+    <i class="fas fa-heart"></i>
+</div>
+<div class="icon" style="top:20%; left:45%;">
+    <i class="fas fa-fire"></i>
+</div>
+<div class="icon" style="top:70%; right:20%;">
+    <i class="fas fa-kit-medical"></i>
+</div>
+<div class="icon" style="top:40%; right:40%;">
+    <i class="fas fa-user-shield"></i>
 </div>
 
 <!-- ===== MENU ===== -->
@@ -346,12 +363,7 @@ body{
     </div>
 
     <div class="subtitle">
-        <i class="fas fa-fire-extinguisher"></i><br>
-        <i class="fas fa-shield-halved"></i><br><i class="fas fa-truck-medical"></i><br>
-        ¡Aprende jugando con los héroes de emergencia!
-        <i class="fas fa-fire-extinguisher"></i><br>
-        <i class="fas fa-shield-halved"></i><br>
-        <i class="fas fa-truck-medical"></i><br>
+        <i class="fas fa-fire-extinguisher"></i><br> <i class="fas fa-shield-halved"></i><br><i class="fas fa-truck-medical"></i><br>¡Aprende jugando con los héroes de emergencia!<i class="fas fa-fire-extinguisher"></i><br><i class="fas fa-shield-halved"></i><br><i class="fas fa-truck-medical"></i><br>
     </div>
 
     <div class="menu-buttons">
@@ -466,11 +478,11 @@ const images = {
 
 const titles = {
 
-    fire:"<i class="fas fa-fire-extinguisher"></i><br> ROMPECABEZAS DE BOMBEROS",
+    fire: '<i class="fas fa-fire-extinguisher"></i> ROMPECABEZAS DE BOMBEROS',
 
-    police:"<i class="fas fa-shield-halved"></i><br> ROMPECABEZAS DE POLICÍAS",
+    police: '<i class="fas fa-shield-halved"></i> ROMPECABEZAS DE POLICÍAS',
 
-    ambulance:"<i class="fas fa-truck-medical"></i><br> ROMPECABEZAS DE AMBULANCIAS"
+    ambulance: '<i class="fas fa-truck-medical"></i> ROMPECABEZAS DE AMBULANCIAS'
 
 };
 
