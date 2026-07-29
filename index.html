@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Mini Héroes</title>
-
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="imagenes/LOGO-removebg.png">
 
@@ -324,15 +324,13 @@ body{
 
 <div class="decor">
 
-    <div class="icon" style="top:5%; left:5%;">🚒</div>
-    <div class="icon" style="top:10%; right:8%;">🚑</div>
-    <div class="icon" style="top:35%; left:3%;">🚓</div>
-    <div class="icon" style="top:60%; right:5%;">🩺</div>
-    <div class="icon" style="top:80%; left:10%;">👮</div>
-    <div class="icon" style="top:20%; left:45%;">❤️</div>
-    <div class="icon" style="top:70%; right:20%;">🔥</div>
-    <div class="icon" style="top:40%; right:40%;">⛑️</div>
-
+<div class="icon"><i class="fas fa-fire-extinguisher"></i></div>
+<div class="icon"><i class="fas fa-truck-medical"></i></div>
+<div class="icon"><i class="fas fa-shield-halved"></i></div>
+<div class="icon"><i class="fas fa-stethoscope"></i></div>
+<div class="icon"><i class="fas fa-heart"></i></div>
+<div class="icon"><i class="fas fa-fire"></i></div>
+<div class="icon"><i class="fas fa-kit-medical"></i></div>
 </div>
 
 <!-- ===== MENU ===== -->
@@ -348,7 +346,12 @@ body{
     </div>
 
     <div class="subtitle">
-        🚒🚓🚑 ¡Aprende jugando con los héroes de emergencia! 🚒🚓🚑
+        <i class="fas fa-fire-extinguisher"></i><br>
+        <i class="fas fa-shield-halved"></i><br><i class="fas fa-truck-medical"></i><br>
+        ¡Aprende jugando con los héroes de emergencia!
+        <i class="fas fa-fire-extinguisher"></i><br>
+        <i class="fas fa-shield-halved"></i><br>
+        <i class="fas fa-truck-medical"></i><br>
     </div>
 
     <div class="menu-buttons">
@@ -356,7 +359,7 @@ body{
         <button class="menu-btn fire"
         onclick="startGame('fire')">
 
-            🚒<br>
+            <i class="fas fa-fire-extinguisher"></i><br>
             BOMBEROS
 
         </button>
@@ -364,7 +367,7 @@ body{
         <button class="menu-btn police"
         onclick="startGame('police')">
 
-            🚓<br>
+            <i class="fas fa-shield-halved"></i><br>
             POLICÍAS
 
         </button>
@@ -372,7 +375,7 @@ body{
         <button class="menu-btn ambulance"
         onclick="startGame('ambulance')">
 
-            🚑<br>
+            <i class="fas fa-truck-medical"></i><br>
             AMBULANCIAS
 
         </button>
@@ -393,7 +396,7 @@ body{
         </div>
 
         <div class="timer">
-            ⏰ <span id="time">01:00</span>
+            <i class="fas fa-clock"></i>  <span id="time">01:00</span>
         </div>
 
     </div>
@@ -403,7 +406,7 @@ body{
         <div class="left-panel">
 
             <div class="box-title">
-                🧩 PIEZAS
+                <i class="fas fa-puzzle-piece"></i> PIEZAS
             </div>
 
             <div class="pieces"
@@ -414,14 +417,14 @@ body{
                 <button class="action-btn restart"
                 onclick="restartGame()">
 
-                    🔄 Reiniciar
+                    <i class="fas fa-rotate-right"></i> Reiniciar
 
                 </button>
 
                 <button class="action-btn back"
                 onclick="goHome()">
 
-                    🏠 Inicio
+                  <i class="fas fa-house"></i> Inicio
 
                 </button>
 
@@ -435,7 +438,7 @@ body{
         <div class="right-panel">
 
             <div class="box-title">
-                ⭐ COMPLETA LA IMAGEN ⭐
+               <i class="fas fa-image"></i>  COMPLETA LA IMAGEN 
             </div>
 
             <div class="board"
@@ -463,11 +466,11 @@ const images = {
 
 const titles = {
 
-    fire:"🚒 ROMPECABEZAS DE BOMBEROS",
+    fire:"<i class="fas fa-fire-extinguisher"></i><br> ROMPECABEZAS DE BOMBEROS",
 
-    police:"🚓 ROMPECABEZAS DE POLICÍAS",
+    police:"<i class="fas fa-shield-halved"></i><br> ROMPECABEZAS DE POLICÍAS",
 
-    ambulance:"🚑 ROMPECABEZAS DE AMBULANCIAS"
+    ambulance:"<i class="fas fa-truck-medical"></i><br> ROMPECABEZAS DE AMBULANCIAS"
 
 };
 
@@ -603,7 +606,7 @@ function createBoard(){
                         "correct");
 
                         message.innerHTML =
-                        "✅ ¡Muy bien!";
+                        "<i class="fas fa-circle-check"></i> ¡Muy bien!";
 
                         message.style.color =
                         "#00a000";
@@ -616,7 +619,7 @@ function createBoard(){
                             clearInterval(timer);
 
                             message.innerHTML =
-                            "🎉 ¡MISIÓN COMPLETADA! 🎉";
+                           "<i class="fas fa-trophy"></i>¡MISIÓN COMPLETADA! <i class="fas fa-trophy"></i>";
 
                             message.style.color =
                             "#ff7b00";
@@ -632,7 +635,7 @@ function createBoard(){
                         "5px solid red";
 
                         message.innerHTML =
-                        "❌ Esa pieza no va ahí";
+                        "<i class="fas fa-circle-xmark"></i> Esa pieza no va ahí";
 
                         message.style.color =
                         "red";
@@ -697,7 +700,7 @@ function startTimer(){
             clearInterval(timer);
 
             message.innerHTML =
-            "⏰ ¡SE ACABÓ EL TIEMPO!";
+            "<i class="fas fa-circle-xmark"></i> ¡SE ACABÓ EL TIEMPO!";
 
             message.style.color =
             "red";
